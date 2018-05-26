@@ -16,7 +16,6 @@ module.exports = {
       return getControllerMethod(i.name)
     }).join(',')
     var body = getControllerBody(controllerMethods)
-    console.log(body)
     return body
   }
 }

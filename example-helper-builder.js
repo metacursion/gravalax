@@ -4,7 +4,7 @@ module.exports = {
       return getHelperMethod(i.name, classname)
     }).join(',')
     var body = getHelperBody(helperMethods)
-    console.log(body)
+    // console.log(body)
     return body
   }
 }
