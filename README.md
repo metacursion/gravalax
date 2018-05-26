@@ -22,29 +22,29 @@ component
 
 Or copy-paste sample patterns from FooServiceExample.
 
-### Sample FooService.cls
+#### Sample FooService.cls
 ```
 public with sharing class FooService {
 	@AuraEnabled public static void getSampleString(String fizz, String buzz) {
-    return fizz + buzz;
+		return fizz + buzz;
 	}
 }
 ```
 
 ## Limitations
-NOTE: @AuraEnabled methods have to be in same line as method name
+NOTE: `@AuraEnabled` modifier have to be in same line as method name
 
 THIS WONT WORK:
 ```
 @AuraEnabled 
-public static Void getSampleString(string fizz) {
+public static void getSampleString(string fizz) {
 }
 ```
 NOTE: Parameters have to be in single line
 
 THIS WONT WORK:
 ```
-@AuraEnabled public static Void getSampleString(
+@AuraEnabled public static void getSampleString(
 	string fizz,
 	string bazz) {
 }
