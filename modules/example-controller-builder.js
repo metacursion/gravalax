@@ -21,8 +21,8 @@ module.exports = {
 }
   function getControllerBody(body){
     return `({${body}  
-    })
-    `
+})
+`
   }
   function getControllerMethod(jsmethod){
       return `
