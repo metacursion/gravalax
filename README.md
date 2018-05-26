@@ -1,5 +1,5 @@
 # gravalax
-Simple utility to automatically generate Lightning service components using Lax library
+Simple utility to automatically generate Lightning service components using Lax library (https://github.com/ruslan-kurchenko/sfdc-lax)
 
 ## Motivation
 When quickly prototyping something, saves you from writing same and same code again - just define the skeleton in Apex, and let service component follow it.
@@ -8,6 +8,7 @@ When quickly prototyping something, saves you from writing same and same code ag
 `node index.js FooService.cls` will generate FooService/FooService.cmp and related JS controller.
 
 Now, Include it in your component markup as
+
 `<c:FooService aura:id="FooService"/>`
 
 Then call Apex methods by
