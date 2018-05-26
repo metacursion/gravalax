@@ -7,7 +7,7 @@ When quickly prototyping something, saves you from writing same and same code ag
 ## Usage
 `node index.js FooService.cls` will generate FooService and FooServiceExample components, related JS controllers and helpers.
 
-Now, Include it in your component markup as
+Now, include it in your component markup as
 
 `<c:FooService aura:id="FooService"/>`
 
@@ -19,6 +19,8 @@ component
 .then(function(res) {console.log(res))
 .catch(function(err) { })
 ```
+
+Or copy-paste sample patterns from FooServiceExample.
 
 ### Sample FooService.cls
 ```
