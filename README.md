@@ -25,8 +25,8 @@ Or copy-paste sample patterns from FooServiceExample.
 ### Sample FooService.cls
 ```
 public with sharing class FooService {
-	@AuraEnabled public static Void getSampleString(string fizz) {
-    return fizz + 'buzz';
+	@AuraEnabled public static void getSampleString(String fizz, String buzz) {
+    return fizz + buzz;
 	}
 }
 ```
