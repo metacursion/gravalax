@@ -3,10 +3,11 @@ function getParams(match){
 }
 function parseParams(params){
   if(!params) return params
-  return params[1].split(',').map( i => getParam(i) )
+  var ret = params[1].split(',').map( getParam.bind() )
+  return ret
 }
 function getParam(param){
-  var i = param.split(' ')
+  var i = param.trim().split(' ')
   return { name : i[1], type : normalizeType(i[0]) }
 }
 function normalizeType(type){
