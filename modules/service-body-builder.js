@@ -16,7 +16,7 @@ function getComponentMethod(name, attributes){
   return `    <aura:method name="${name}">
       ${attributes}
     </aura:method>
-  `
+`
 }
 function getComponentBody(controller, methods){
   return `<aura:component controller="${controller}">

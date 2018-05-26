@@ -10,8 +10,8 @@ module.exports = {
 }
   function getHelperBody(body){
     return `({${body}  
-    })
-    `
+})
+`
   }
   function getHelperMethod(jsmethod, className){
       return `
