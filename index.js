@@ -33,15 +33,16 @@ function writeComponent(classname, methods, stamp){
   writeResults( classname +'/'+classname+'.cmp', getTimestampXML(stamp) + bodybuilder.generateComponent(methods, classname) )
   writeResults( classname +'/'+classname+'Controller.js', getTimestampJS(stamp) + controllerbuilder.generateController(methods) )
 }
-function writeExample(classname, methods, stamp){
-  classname += 'Example'
+function writeExample(serviceClassName, methods, stamp){
+  
+  var classname = serviceClassName+'Example'
   if(!fs.existsSync(classname)){
     fs.mkdirSync(classname)
   }
   writeResults( classname +'/'+classname+'.cmp-meta.xml', getMeta() )
-  writeResults( classname +'/'+classname+'.cmp', getTimestampXML(stamp) + examplebodybuilder.generateExampleComponent(classname) )
+  writeResults( classname +'/'+classname+'.cmp', getTimestampXML(stamp) + examplebodybuilder.generateExampleComponent(serviceClassName) )
   writeResults( classname +'/'+classname+'Controller.js', getTimestampJS(stamp) + examplecontrollerbuilder.generateExampleController(methods) )
-  writeResults( classname +'/'+classname+'Helper.js', getTimestampJS(stamp) + examplehelperbuilder.generateExampleHelper(methods, classname) )
+  writeResults( classname +'/'+classname+'Helper.js', getTimestampJS(stamp) + examplehelperbuilder.generateExampleHelper(methods, serviceClassName) )
 }
 function writeResults(filename, result){
   fs.writeFile(filename, result, 'utf8', function(err) {

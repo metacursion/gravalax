@@ -18,7 +18,7 @@ module.exports = {
       ${jsmethod} : function(component, event, helper) {
         component
             .find('${className}')
-            .${jsmethod}()
+            ._${jsmethod}()
             .then(helper.${jsmethod}Success.bind(null, component, helper))
             .catch(helper.${jsmethod}Fail.bind(null, component, helper))
       },
